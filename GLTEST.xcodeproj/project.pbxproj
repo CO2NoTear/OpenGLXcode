@@ -7,8 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E3CE53F72AA72B1100E1215C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CE53F62AA72B1100E1215C /* main.cpp */; };
+		E3CE54072AA7356F00E1215C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE54062AA7356F00E1215C /* OpenGL.framework */; };
+		E3CE54092AA7358A00E1215C /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE54082AA7358A00E1215C /* libglfw.3.3.dylib */; };
+		E3CE540B2AA735CA00E1215C /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE540A2AA735CA00E1215C /* IOKit.framework */; };
+		E3CE540D2AA735CF00E1215C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE540C2AA735CE00E1215C /* Cocoa.framework */; };
+		E3CE54352AA761B500E1215C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE540C2AA735CE00E1215C /* Cocoa.framework */; };
+		E3CE54362AA761B500E1215C /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE540A2AA735CA00E1215C /* IOKit.framework */; };
+		E3CE54372AA761B500E1215C /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE54082AA7358A00E1215C /* libglfw.3.3.dylib */; };
+		E3CE54382AA761B500E1215C /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3CE54062AA7356F00E1215C /* OpenGL.framework */; };
+		E3CE54412AA7625300E1215C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CE53F62AA72B1100E1215C /* main.cpp */; };
+		E3CE54442AA7668800E1215C /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = E3CE53FF2AA7316800E1215C /* glad.c */; };
+		E3CE54482AA76AAF00E1215C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E3CE54142AA75F1E00E1215C /* main.cpp */; };
+		E3CE54492AA76BDB00E1215C /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = E3CE53FF2AA7316800E1215C /* glad.c */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E3CE54452AA7686800E1215C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3CE53EB2AA72B1100E1215C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3CE53F22AA72B1100E1215C;
+			remoteInfo = "My Solution";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		E3CE53F12AA72B1100E1215C /* CopyFiles */ = {
@@ -20,11 +41,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		E3CE54392AA761B500E1215C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		E3CE53F32AA72B1100E1215C /* GLTEST */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GLTEST; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3CE53F32AA72B1100E1215C /* My Solution */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "My Solution"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3CE53F62AA72B1100E1215C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E3CE53FF2AA7316800E1215C /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = glad.c; path = GLTEST/glad.c; sourceTree = SOURCE_ROOT; };
+		E3CE54022AA734D900E1215C /* homebrew */ = {isa = PBXFileReference; lastKnownFileType = folder; name = homebrew; path = ../../../../opt/homebrew; sourceTree = "<group>"; };
+		E3CE54042AA734F500E1215C /* pkgconfig */ = {isa = PBXFileReference; lastKnownFileType = folder; name = pkgconfig; path = ../../../../opt/homebrew/Cellar/glfw/3.3.8/lib/pkgconfig; sourceTree = "<group>"; };
+		E3CE54062AA7356F00E1215C /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		E3CE54082AA7358A00E1215C /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../opt/homebrew/Cellar/glfw/3.3.8/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
+		E3CE540A2AA735CA00E1215C /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		E3CE540C2AA735CE00E1215C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		E3CE54142AA75F1E00E1215C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		E3CE543D2AA761B500E1215C /* Exercise Answer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Exercise Answer"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +71,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3CE540D2AA735CF00E1215C /* Cocoa.framework in Frameworks */,
+				E3CE540B2AA735CA00E1215C /* IOKit.framework in Frameworks */,
+				E3CE54092AA7358A00E1215C /* libglfw.3.3.dylib in Frameworks */,
+				E3CE54072AA7356F00E1215C /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3CE54342AA761B500E1215C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3CE54352AA761B500E1215C /* Cocoa.framework in Frameworks */,
+				E3CE54362AA761B500E1215C /* IOKit.framework in Frameworks */,
+				E3CE54372AA761B500E1215C /* libglfw.3.3.dylib in Frameworks */,
+				E3CE54382AA761B500E1215C /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,14 +96,19 @@
 			isa = PBXGroup;
 			children = (
 				E3CE53F52AA72B1100E1215C /* GLTEST */,
+				E3CE54132AA75F1E00E1215C /* Exercise Answers */,
+				E3CE541E2AA75F4D00E1215C /* GladDependency */,
 				E3CE53F42AA72B1100E1215C /* Products */,
+				E3CE54012AA734D900E1215C /* Frameworks */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
 		E3CE53F42AA72B1100E1215C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E3CE53F32AA72B1100E1215C /* GLTEST */,
+				E3CE53F32AA72B1100E1215C /* My Solution */,
+				E3CE543D2AA761B500E1215C /* Exercise Answer */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,16 +117,45 @@
 			isa = PBXGroup;
 			children = (
 				E3CE53F62AA72B1100E1215C /* main.cpp */,
+				E3CE53FF2AA7316800E1215C /* glad.c */,
 			);
 			path = GLTEST;
+			sourceTree = "<group>";
+		};
+		E3CE54012AA734D900E1215C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3CE540C2AA735CE00E1215C /* Cocoa.framework */,
+				E3CE540A2AA735CA00E1215C /* IOKit.framework */,
+				E3CE54082AA7358A00E1215C /* libglfw.3.3.dylib */,
+				E3CE54062AA7356F00E1215C /* OpenGL.framework */,
+				E3CE54042AA734F500E1215C /* pkgconfig */,
+				E3CE54022AA734D900E1215C /* homebrew */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3CE54132AA75F1E00E1215C /* Exercise Answers */ = {
+			isa = PBXGroup;
+			children = (
+				E3CE54142AA75F1E00E1215C /* main.cpp */,
+			);
+			path = "Exercise Answers";
+			sourceTree = "<group>";
+		};
+		E3CE541E2AA75F4D00E1215C /* GladDependency */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GladDependency;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E3CE53F22AA72B1100E1215C /* GLTEST */ = {
+		E3CE53F22AA72B1100E1215C /* My Solution */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E3CE53FA2AA72B1100E1215C /* Build configuration list for PBXNativeTarget "GLTEST" */;
+			buildConfigurationList = E3CE53FA2AA72B1100E1215C /* Build configuration list for PBXNativeTarget "My Solution" */;
 			buildPhases = (
 				E3CE53EF2AA72B1100E1215C /* Sources */,
 				E3CE53F02AA72B1100E1215C /* Frameworks */,
@@ -77,9 +165,27 @@
 			);
 			dependencies = (
 			);
-			name = GLTEST;
+			name = "My Solution";
 			productName = GLTEST;
-			productReference = E3CE53F32AA72B1100E1215C /* GLTEST */;
+			productReference = E3CE53F32AA72B1100E1215C /* My Solution */;
+			productType = "com.apple.product-type.tool";
+		};
+		E3CE54302AA761B500E1215C /* Exercise Answer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3CE543A2AA761B500E1215C /* Build configuration list for PBXNativeTarget "Exercise Answer" */;
+			buildPhases = (
+				E3CE54312AA761B500E1215C /* Sources */,
+				E3CE54342AA761B500E1215C /* Frameworks */,
+				E3CE54392AA761B500E1215C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3CE54462AA7686800E1215C /* PBXTargetDependency */,
+			);
+			name = "Exercise Answer";
+			productName = GLTEST;
+			productReference = E3CE543D2AA761B500E1215C /* Exercise Answer */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -109,7 +215,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E3CE53F22AA72B1100E1215C /* GLTEST */,
+				E3CE53F22AA72B1100E1215C /* My Solution */,
+				E3CE54302AA761B500E1215C /* Exercise Answer */,
 			);
 		};
 /* End PBXProject section */
@@ -119,11 +226,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3CE53F72AA72B1100E1215C /* main.cpp in Sources */,
+				E3CE54442AA7668800E1215C /* glad.c in Sources */,
+				E3CE54412AA7625300E1215C /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3CE54312AA761B500E1215C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3CE54492AA76BDB00E1215C /* glad.c in Sources */,
+				E3CE54482AA76AAF00E1215C /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E3CE54462AA7686800E1215C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3CE53F22AA72B1100E1215C /* My Solution */;
+			targetProxy = E3CE54452AA7686800E1215C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E3CE53F82AA72B1100E1215C /* Debug */ = {
@@ -176,6 +301,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/Cellar/glfw/3.3.8/include/,
+					"\"$(SRCROOT)/../../Dependencies/glad/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = /opt/homebrew/Cellar/glfw/3.3.8/lib;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -228,6 +358,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/opt/homebrew/Cellar/glfw/3.3.8/include/,
+					"\"$(SRCROOT)/../../Dependencies/glad/include\"",
+				);
+				LIBRARY_SEARCH_PATHS = /opt/homebrew/Cellar/glfw/3.3.8/lib;
 				MACOSX_DEPLOYMENT_TARGET = 13.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -239,7 +374,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/Cellar/glfw/3.3.8/lib/**",
+					/opt/homebrew/Cellar/glfw/3.3.8/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "";
 			};
 			name = Debug;
 		};
@@ -247,7 +388,41 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/Cellar/glfw/3.3.8/lib/**",
+					/opt/homebrew/Cellar/glfw/3.3.8/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "";
+			};
+			name = Release;
+		};
+		E3CE543B2AA761B500E1215C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/Cellar/glfw/3.3.8/lib/**",
+					/opt/homebrew/Cellar/glfw/3.3.8/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "";
+			};
+			name = Debug;
+		};
+		E3CE543C2AA761B500E1215C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				GCC_WARN_INHIBIT_ALL_WARNINGS = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"/opt/homebrew/Cellar/glfw/3.3.8/lib/**",
+					/opt/homebrew/Cellar/glfw/3.3.8/lib,
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WARNING_CFLAGS = "";
 			};
 			name = Release;
 		};
@@ -263,11 +438,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E3CE53FA2AA72B1100E1215C /* Build configuration list for PBXNativeTarget "GLTEST" */ = {
+		E3CE53FA2AA72B1100E1215C /* Build configuration list for PBXNativeTarget "My Solution" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E3CE53FB2AA72B1100E1215C /* Debug */,
 				E3CE53FC2AA72B1100E1215C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3CE543A2AA761B500E1215C /* Build configuration list for PBXNativeTarget "Exercise Answer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3CE543B2AA761B500E1215C /* Debug */,
+				E3CE543C2AA761B500E1215C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
