@@ -11,17 +11,23 @@ const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
 const char *vertexShaderSource = "#version 330 core\n"
-    "layout (location = 0) in vec3 aPos;\n"
-    "void main()\n"
-    "{\n"
-    "   gl_Position = vec4(aPos.x, aPos.y, aPos.z, 1.0);\n"
-    "}\0";
+	"layout (location = 0) in vec3 aPos;\n"
+	"layout (location = 1) in vec3 aColor;\n"
+	"out vec4 vertexColor;\n"
+	"void main()\n"
+	"{\n"
+	"   gl_Position = vec4(aPos, 1.0f);\n"
+	"   vertexColor = vec4(aColor, 1.0f);\n"
+	"}\0";
 const char *fragmentShaderSource = "#version 330 core\n"
-    "out vec4 FragColor;\n"
-    "void main()\n"
-    "{\n"
-    "   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
-    "}\n\0";
+	"in vec4 vertexColor;\n"
+	"out vec4 FragColor;\n"
+//	"uniform vec4 uniColor;\n"
+	"void main()\n"
+	"{\n"
+	"   FragColor = vertexColor;\n"
+//	"   FragColor = uniColor;\n"
+	"}\n\0";
 
 int main()
 {
@@ -110,11 +116,12 @@ int main()
 //        1, 2, 3   // second Triangle
 //    };
     float vertices[] = {
-        -0.5f, 0.0f, 0.0f,
-        0.0f, 0.0f, 0.0f,
-        -0.25f, 0.5f, 0.0f,
-        0.25f, 0.5f, 0.0f,
-        0.5f, 0.0f, 0.0f
+		// position			//color
+        -0.5f, 0.0f, 0.0f,	0.5f, 0.0f, 0.0f,
+        0.0f, 0.0f, 0.0f, 	0.0f, 0.5f, 0.0f,
+        -0.25f, 0.5f, 0.0f, 0.0f, 0.0f, 0.5f,
+        0.25f, 0.5f, 0.0f,  0.25f, 0.25f, 0.0f,
+        0.5f, 0.0f, 0.0f,   0.25f, 0.0f, 0.25f
     };
     unsigned int indices[] = {
         0, 1, 2,
@@ -126,7 +133,6 @@ int main()
     glGenBuffers(1, &EBO);
 //     bind the Vertex Array Object first, then bind and set vertex buffer(s), and then configure vertex attributes(s).
     glBindVertexArray(VAO);
-    unsigned int VBO2, VAO2;
 
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
@@ -134,8 +140,14 @@ int main()
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
-    glEnableVertexAttribArray(0);
+//    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
+	// position
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+	// it enables location at 0 to apply the attributes
+	glEnableVertexAttribArray(0);
+	// color
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3*sizeof(float)));
+	glEnableVertexAttribArray(1);
 
     // note that this is allowed, the call to glVertexAttribPointer registered VBO as the vertex attribute's bound vertex buffer object so afterwards we can safely unbind
     glBindBuffer(GL_ARRAY_BUFFER, 0);
@@ -149,7 +161,7 @@ int main()
 
 
     // uncomment this call to draw in wireframe polygons.
-    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+//    glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
 
     // render loop
     // -----------
